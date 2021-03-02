@@ -2,7 +2,7 @@
 
 bool isPalindrome(const std::string & word)
 {
-    std::string reversed = std::string(word.rbegin(), word.rend());
+    std::string reversed = std::string(word.crbegin(), word.crend());
     return word == reversed;
 }
 
@@ -26,11 +26,11 @@ int main()
     modifiedInput = makeLowerWithoutSpaces(input);
     if(isPalindrome(modifiedInput))
     {
-        std::cout << "Wprowadzone slowo jest palindromem";
+        std::cout << "Wprowadzone zdanie jest palindromem";
     }
     else
     {
-        std::cout << "Wprowadzone slowo nie jest palindromem";
+        std::cout << "Wprowadzone zdanie nie jest palindromem";
     }
     return 0;
 }
